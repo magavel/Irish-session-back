@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tunes",
+  "info": {
+    "singularName": "tune",
+    "pluralName": "tunes",
+    "displayName": "tune",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "fileAbc": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "abc": {
+      "type": "richtext"
+    },
+    "set": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::set.set",
+      "inversedBy": "tunes"
+    },
+    "tonality": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "string"
+    }
+  }
+}

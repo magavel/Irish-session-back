@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sets",
+  "info": {
+    "singularName": "set",
+    "pluralName": "sets",
+    "displayName": "set",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tunes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tune.tune",
+      "mappedBy": "set"
+    }
+  }
+}
